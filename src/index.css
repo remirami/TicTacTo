@@ -1,13 +1,138 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font: 32px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    background-image: linear-gradient(to right, rgba(0,255,0,0), rgba(0,100,0,1));
+}
+  
+  ol, ul {
+    padding-left: 30px;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .square {
+    float: left;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 44px;
+    height: 84px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 84px;
+    background-color: green;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #3e8e41;
+    color:#ffffff
+}
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+
+
+  }
+  
+ 
+  .center-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: nowrap;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.game-board{
+    flex: 1;
+    flex-basis: 50%;
+    border: 1px;
+
 }
+.winning-square {
+    color: rgb(162, 235, 152);
+    text-shadow: 2px 2px 4px #000000;
+    animation: growAndChangeColor 1s ease-in-out;
+
+}
+@keyframes growAndChangeColor {
+    from {
+      transform: scale(1);
+      background-color: white;
+    }
+    to {
+      transform: scale(1.1);
+      background-color: rgb(19, 75, 3);
+    }
+  }
+  
+.game-info {
+    flex: 1;
+    text-align: left;
+    flex-basis: 50%;
+}
+
+.buttonToggle {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    color: rgb(220, 255, 227);
+  }
+  .buttonToggle:hover{
+    background-color: #3e8e41;
+    outline: solid;
+    outline-color: green;
+    outline-width: 2px;
+
+  }
+  .buttons:hover{
+    background-color: #3e8e41;
+    outline: solid;
+    outline-color: green;
+    outline-width: 2px;
+  }
+  .buttons {
+   
+    background-color: #4CAF50;
+    border: none;
+    color: rgb(220, 255, 227);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+      
+  }
+  
